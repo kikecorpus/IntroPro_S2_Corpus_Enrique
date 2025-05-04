@@ -46,15 +46,16 @@ FinFuncion
 
 Funcion ActualizarMayorYMenor(nombreEmpleado, sueldoNeto,mayorSueldoNeto Por Referencia, nombreMayorSueldo Por Referencia,menorSueldoNeto Por Referencia, nombreMenorSueldo Por Referencia)
 	
-    Si sueldoNeto > mayorSueldoNeto Entonces
-        mayorSueldoNeto <- sueldoNeto
-        nombreMayorSueldo <- nombreEmpleado
-    FinSi
+  	Si mayorSueldoNeto==0 o sueldoNeto > mayorSueldoNeto Entonces
+		mayorSueldoNeto <- sueldoNeto
+		nombreMayorSueldo <- nombreEmpleado
+	FinSi
 	
-    Si sueldoNeto < menorSueldoNeto Entonces
-        menorSueldoNeto <- sueldoNeto
-        nombreMenorSueldo <- nombreEmpleado
-    FinSi
+	Si menorSueldoNeto==0 o sueldoNeto < menorSueldoNeto Entonces
+		menorSueldoNeto <- sueldoNeto
+		nombreMenorSueldo <- nombreEmpleado
+	FinSi
+	
 	
 FinFuncion
 
@@ -80,7 +81,7 @@ Algoritmo Funcion_EmpresaAcme
 	mayorSueldoNeto <- 0
 	nombreMayorSueldo <- ""
 	
-	menorSueldoNeto <- 999999999999999
+	menorSueldoNeto <- 0
 	nombreMenorSueldo <- ""
 	
 	Para i <- 1 Hasta nEmpleados Con Paso 1 Hacer
