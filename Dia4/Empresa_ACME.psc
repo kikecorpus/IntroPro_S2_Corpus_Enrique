@@ -20,7 +20,7 @@ Algoritmo Empresa_ACME
 	mayorSueldoNeto <- 0
 	nombreMayorSueldo <- ""
 	
-	menorSueldoNeto <- 999999999999999
+	menorSueldoNeto <- 0
 	nombreMenorSueldo <- ""
 	
 	
@@ -55,12 +55,12 @@ Algoritmo Empresa_ACME
 		
 		
 		//Comparacion de mayy y menor sueldo 
-		Si sueldoNeto > mayorSueldoNeto Entonces
+		Si mayorSueldoNeto==0 o sueldoNeto > mayorSueldoNeto Entonces
 			mayorSueldoNeto <- sueldoNeto
 			nombreMayorSueldo <- nombreEmpleado
 		FinSi
 		
-		Si sueldoNeto < menorSueldoNeto Entonces
+		Si menorSueldoNeto==0 o sueldoNeto < menorSueldoNeto Entonces
 			menorSueldoNeto <- sueldoNeto
 			nombreMenorSueldo <- nombreEmpleado
 		FinSi
